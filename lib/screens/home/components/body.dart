@@ -3,6 +3,7 @@ import 'package:mohurpe_a/constants.dart';
 import 'package:mohurpe_a/screens/home/components/body_content.dart';
 import 'package:mohurpe_a/screens/pwdreset/coming_soon_screen.dart';
 import 'package:mohurpe_a/screens/recenttrans/recent_transaction.dart';
+import 'package:mohurpe_a/utils/supabase.dart';
 
 class Body extends StatelessWidget {
   final padding = const EdgeInsets.symmetric(horizontal: 20);
@@ -24,7 +25,8 @@ class Body extends StatelessWidget {
                 onPressed: () {
                   _scaffoldState.currentState?.openDrawer();
                 }),
-            title: Text('Welcome to MohurPe',
+            title: Text(
+                'Welcome to MohurPe, ${SupabaseHandler.getCurrentUser()?.email ?? "no user"}',
                 style: TextStyle(fontSize: size.height * 0.017))),
       ),
       // /////////////////

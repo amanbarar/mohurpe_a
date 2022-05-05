@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mohurpe_a/constants.dart';
 import 'package:mohurpe_a/screens/welcome/welcome_screen.dart';
 
-void main() {
+Future<void> main() async {
   runApp(const MyApp());
 }
 
@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
 
   // Color myColor = Colors.green;
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
